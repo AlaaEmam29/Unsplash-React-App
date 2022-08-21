@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+a,a:hover{
+  text-decoration: none;
+  color: inherit;
+}
+.lds-facebook {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  width: 80px;
+  height: 80px;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #000;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%,
+  100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+.form-search
+{
+  width: 45%;
+}
+
+
+.form-control,
+.btn-form {
+  letter-spacing:0.15rem;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  text-transform: capitalize;
+  border-radius: 0px;
+  font-size: 1.5rem;
+  background: transparent;
+  border-bottom: 3px solid #000;
+}
+.photo {
+  height: 17.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.photo > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.photo h4 {
+  margin-bottom: 0.5rem;
+}
+.photo p {
+  margin-bottom: 0;
+}
+.profile-photo {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.photo-overlay {
+  position: absolute;
+  width: 100%;
+  padding: 0.75rem;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  transform: translateY(100%);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.photo:hover .photo-overlay {
+  transform: translateY(0);
+}
+@media screen and (max-width: 768px) {
+  .form-search
+{
+  width:100%;
+}
+
+}
